@@ -1,0 +1,14 @@
+.address-tile{
+    border: 1px dashed grey;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.address-tile:hover{
+    cursor: pointer;
+}
