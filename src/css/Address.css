@@ -1,0 +1,28 @@
+.list-item{
+    list-style-type: none;
+    width: 20rem;
+    height: 15rem;
+    margin: 1rem auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.24);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list-item h3{
+    margin-bottom: 0.2rem;
+}
+
+.list-item li{
+    font-weight: 450;
+}
+
+.list-item__btn-container{
+    margin: 1rem 0;
+}
+
+.list-item__btn-container button{
+    margin-right: 0.5rem;
+}
