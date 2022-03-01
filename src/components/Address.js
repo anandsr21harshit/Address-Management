@@ -12,8 +12,8 @@ function Address({people,removeItem}) {
         <li>{people.state}</li>
         <li>ID: {people.id}</li>
         <div className="list-item__btn-container">
-            <button onClick={()=>removeItem(people.id)}>Edit</button>
-            <button>Remove</button>
+            <button>Edit</button>
+            <button onClick={()=>removeItem(people.id)}>Remove</button>
         </div>
         {console.log(typeof(people.id))}
     </ul>

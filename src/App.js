@@ -11,13 +11,14 @@ const url = "https://621c6704768a4e1020a909e2.mockapi.io/users";
 function App() {
 
   const [visible, setVisible] = useState(true);
-  const [serverData, setServerData] = useState([]);
+  const [serverData, setServerData] = useState([]);  // storing data from server in state variables
   
   useEffect(()=>{
     (async ()=>{
       const response = await axios.get(url);
       setServerData(response.data);
     })()
+    console.log("use effect ran");
   },[])
 
   // function to toggle addressFillUpForm
@@ -27,7 +28,8 @@ function App() {
 
   //function to remove item
   function removeItem(id){
-    setServerData(serverData.filter(item => item.id !== id));  // id is string
+    setServerData(serverData => serverData.filter(item => item.id !== id));  // id is string
+    console.log("remove item");
   }
   
 
