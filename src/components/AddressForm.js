@@ -4,7 +4,7 @@ import axios from "axios";
 
 const url = "https://621c6704768a4e1020a909e2.mockapi.io/users"
 
-function AddressForm({visible, setVisible}) {
+function AddressForm({visible, setVisible,setServerData,serverData}) {
     
     // object to store data from input tag and then post to server
     const formDataObj = {};
@@ -18,11 +18,14 @@ function AddressForm({visible, setVisible}) {
 
 
     //submitting data to server
-    function formSubmitHandler(e){
+    async function formSubmitHandler(e){
         e.preventDefault();
-        const response = axios.post(url,formData);
+        const response = await axios.post(url,formData);
+        if(response.status === 201){
+            console.log("posted");
+            setServerData([...serverData,response.data]);
+        }
         setVisible(true);
-        console.log(response.data);
     }
 
     //closing form
