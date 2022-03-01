@@ -15,7 +15,6 @@ function Address({people,removeItem}) {
             <button>Edit</button>
             <button onClick={()=>removeItem(people.id)}>Remove</button>
         </div>
-        {console.log(typeof(people.id))}
     </ul>
   )
 }
