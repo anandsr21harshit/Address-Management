@@ -20,12 +20,18 @@ function AddressForm({setVisible,setServerData,serverData}) {
     //submitting data to server
     async function formSubmitHandler(e){
         e.preventDefault();
-        const response = await axios.post(url,formData);
-        if(response.status === 201){
-            console.log("posted");
-            setServerData([...serverData,response.data]);
+        if(Object.keys(formData).length === 0) {
+            alert("Please fill up complete form");
         }
-        setVisible(true);
+        else{
+            const response = await axios.post(url,formData);
+            if(response.status === 201){
+                console.log("posted");
+                setServerData([...serverData,response.data]);
+            }
+            setVisible(true);
+        }
+        
     }
 
     //closing form
