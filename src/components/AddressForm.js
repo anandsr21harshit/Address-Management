@@ -4,7 +4,7 @@ import axios from "axios";
 
 const url = "https://621c6704768a4e1020a909e2.mockapi.io/users"
 
-function AddressForm({visible, setVisible,setServerData,serverData}) {
+function AddressForm({setVisible,setServerData,serverData}) {
     
     // object to store data from input tag and then post to server
     const formDataObj = {};
