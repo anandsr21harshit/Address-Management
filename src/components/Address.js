@@ -15,6 +15,7 @@ function Address({people,removeItem, setEditForm}) {
     localStorage.setItem('pincode',pincode);
     localStorage.setItem('id',id)
   }
+  
   return (
     <ul className='list-item'>
         <li><h3>{people.name}</h3></li>
